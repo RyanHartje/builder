@@ -7,16 +7,31 @@
     <link href="static/css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <div class="navbar">
-        <h1 class="navbar-brand">Builder</h1>
-        <ul class="nav pull-right">
-          <li class="score">0</li>
-        </ul>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Builder</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Score:</a></li>
+            <li><a href="#" class="score"></a></li>
+            <li><a href="#">Multiplier:</a></li>
+            <li><a href="#" class="multi"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
 
 <div class="container-full">
+        <br><br><br>
+        <br><br><br>
 
       <div class="row">
         <div class="col-lg-12 text-center v-center">
@@ -28,7 +43,8 @@
       <div class="row">
         <div class="col-lg-12 text-center v-center">
           <i class="icon-github"></i>
-          <i class="fa fa-money"></i>
+          <button class="click size"><i class="fa fa-money"></i></button>
+          <button class="cathub size"><i class="fa fa-github"></i></button>
         </div>
         <br><br><br>
 </div>
