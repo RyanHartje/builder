@@ -9,6 +9,7 @@
 $(document).ready(function(){
   // Hide Cathub before we start
   $('.cathub').toggle();
+  $('#button').draggable();
 
     // Instansiate variables
     // spawn is our initial clock time
@@ -28,7 +29,7 @@ $(document).ready(function(){
       };
         
       //CALL BACK$!
-      $('.click').click(function(){
+      $('.size').click(function(){
         score += 2*multi;  
       });
         
