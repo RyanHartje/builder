@@ -1,4 +1,4 @@
-/* Builder.js 
+/* Builder.js
  * simple game of time and resources
  *
  * Ryan Hartje - github.com/ryanhartje
@@ -16,26 +16,27 @@ $(document).ready(function(){
     // multi - multipliar for causing noticiable increase
     // init - inital font size
     var spawn = jQuery.now(),
-        score = 1,
-        multi = 24;   
-    
-    // The following defines our interval loop 
-    var refreshScore = setInterval(function(){
+        score = 0,
+        multi = 0;
+        clickValue = 1;
+
+    // The following defines our interval loop
+    setInterval(function(){
       //functions
       // Bonuses and more will add to the score
       var bonus = function(score,points){
         score += points;
         return score;
       };
-        
+
       //CALL BACK$!
       $('.size').click(function(){
-        score += 2*multi;  
+        score += clickValue;
       });
-        
+
       //score logic
-      multi *= Math.round((jQuery.now()/spawn)*1.0001);
-        
+      multi *= Math.round((jQuery.now()/spawn)*1.0000001);
+
       // Update the DOM
       $('.score').text(score);
       $('.multi').text(multi);
@@ -56,8 +57,8 @@ $(document).ready(function(){
         $('.cathub').toggle();
       }
     }, 100);
- 
-    refreshScore(); //mainloop
+
+    //refreshScore(); //mainloop
 
 });
 
